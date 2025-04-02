@@ -1,0 +1,90 @@
+<!-- <p>Click anywhere to activate the handler</p>
+<script>
+    window.addEventListener("click", () => {
+        console.log("You Knocked?");
+    });
+</script> -->
+
+<!-- <button>Click here</button>
+<p>No handlers here.</p>
+<script>
+    let button = document.querySelector("button");
+    button.addEventListener("click", () => {
+        console.log("Button clicked.");
+    })
+</script> -->
+
+<!-- <button>Act-once button</button>
+<script>
+    let button = document.querySelector("button");
+    function once(){
+        console.log("Button clicked.");
+        button.removeEventListener("click", once);
+    }
+    button.addEventListener("click", once);
+</script> -->
+
+<!-- <button>Click me any way you want</button>
+<script>
+    let button = document.querySelector("button");
+    button.addEventListener("mousedown", event => {
+        if (event.button ==0) {
+            console.log("Left Button Clicked");
+        } else if (event.button == 1) {
+            console.log("Middle Button Clicked");
+        } else if (event.button == 2) {
+            console.log("Right Button Clicked");
+        }
+    });
+</script> -->
+
+<!-- PROPAGATION C1 -->
+<!-- <p>A paragraph with a <button>Button</button></p>
+<script>
+    let para = document.querySelector("p");
+    let button = document.querySelector("button");
+    para.addEventListener("mousedown", () => {
+        console.log("Paragraph clicked");
+    });
+    button.addEventListener("mousedown", event => {
+        console.log("Button clicked"); // left click with be received by both the handlers i.e. para and button but right click will be received by the button only
+        if (event.button == 2)  event.stopPropagation(); // use of stopPropagation to stop the mousedown event from being received by the paragraph
+    });
+</script> -->
+
+<!-- PROPAGATION C2 -->
+<!-- <button>A</button>
+<button>B</button>
+<button>C</button>
+<script>
+    document.body.addEventListener("click", event => {
+        if (event.target.nodeName == "BUTTON") {
+            console.log("Button Clicked", event.target.textContent);
+        }
+    });
+</script> -->
+
+<!-- DEFAULT ACTIONS -->
+ <!-- <a href="https://developer.mozilla.org/en-US/">MDN</a>
+ <script>
+    let link = document.querySelector("a");
+    link.addEventListener("click", event => {
+        console.log("Nope.");
+        event.preventDefault();
+    });
+ </script> -->
+
+ <!-- KEY-EVENTS -->
+  <p>This page turns violet when you hold the V key</p>
+  <script>
+    window.addEventListener("keydown", event => {
+        if (event.key == "V") {
+            document.body.style.backgroundColor = "violet";
+        }
+    })
+    window.addEventListener("keyup", event => {
+        if (event.key == "V") {
+            document.body.style.backgroundColor = "";
+        }
+    });
+  </script>
