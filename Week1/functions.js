@@ -20,7 +20,9 @@
 // };
 // console.log(roundTo(26, 10)); 
 
+
 // BINDINGS & SCOPE
+
 // let x = 10;  // global
 // if (true) {
 //     let y = 20; // local to block
@@ -75,6 +77,7 @@
 
 
 // ARROW FUNCTIONS
+
 // read as this input(the parameters) produces this result (the body).
 
 // const square1  =  (x) => { return x * x; }; //when it consist of single parameter, paranthesis around the parameter can be omitted, rewritten as below
