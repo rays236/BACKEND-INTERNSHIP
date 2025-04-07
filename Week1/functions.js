@@ -27,7 +27,11 @@
 // if (true) {
 //     let y = 20; // local to block
 //     var z = 30; // also global
+//     console.log(y);
 // }
+// console.log(x)
+// // console.log(y)
+// console.log(z)
 
 // const halve = function(n) {
 //     return n/2;
@@ -40,7 +44,7 @@
 // NESTED SCOPE
 
 // const hummus  = function(factor) { // the hummus function is the outer function, can't see the amount, unit, name and ingredientAmount bindings from it's inner function ingredient
-//     const ingredient = function(amount, unit, name) { // this ingredient function can see the factor bindings from outer binding
+//     const ingredient = function(amount, unit, name) { // this ingredient function however can see the factor bindings from outer binding function
 //         let ingredientAmount = amount * factor;
 //         if (ingredientAmount > 1) {
 //             unit += "s";
@@ -173,7 +177,7 @@
 
 
 // GROWING FUNCTION
-// introducing function is a program in 2 ways
+// introducing function to a program in 2 different ways
 // - repeated functionality
 // - The second way is that you find you need some functionality that you haven’t written yet and that sounds like it deserves its own function.
 
