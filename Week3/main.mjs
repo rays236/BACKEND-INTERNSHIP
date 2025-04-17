@@ -1,4 +1,4 @@
 import {reverse} from "./reverse.mjs";
 
 let argument = process.argv[2];
-console.log(reverse(argument));p
+console.log(reverse(argument));

@@ -14,7 +14,8 @@
 // });
 
 
-// using promises rather than callback
+//using promises rather than callback
+
 // import {readFile} from "node:fs/promises"
 // readFile("file.txt", "utf8")
 //     .then(text => console.log("This file contains: ", text));

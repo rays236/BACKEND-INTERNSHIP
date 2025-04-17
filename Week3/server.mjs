@@ -14,15 +14,15 @@ import {createServer} from "node:http";
 // console.log("Listening! (port 8000)");
 
 // create a server that reads request bodiess and streams them back to the client as all-uppercase text:
-createServer((request, response) => {
-    response.writeHead(200, {"Content-Type": "text/plain"});
-    request.on("data", chunk => // object 'on' emits event called 'data' then call the callback function to write all caps
-        response.write(chunk.toString().toUpperCase()) // the chunk value passed to this data handler will be binary 'Buffer' which can be converted to the string by decoding it as UTF-8 encoded characters with its toString method
-    )
-    request.on("end", () => response.end()); // here object 'on' emits event called 'end' then calls the callback function to end the connection
-}).listen(8000);
+// createServer((request, response) => {
+//     response.writeHead(200, {"Content-Type": "text/plain"});
+//     request.on("data", chunk => // object 'on' emits event called 'data' then call the callback function to write all caps
+//         response.write(chunk.toString().toUpperCase()) // the chunk value passed to this data handler will be binary 'Buffer' which can be converted to the string by decoding it as UTF-8 encoded characters with its toString method
+//     )
+//     request.on("end", () => response.end()); // here object 'on' emits event called 'end' then calls the callback function to end the connection
+// }).listen(8000);
 
-// test.mjs
+// // test.mjs
 // fetch("http://localhost:8000/", {
 //     method: "POST",
 //     body: "Hello server"
